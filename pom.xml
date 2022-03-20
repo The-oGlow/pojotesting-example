@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.glowa-net.maven.parent</groupId>
+        <artifactId>global-appl-pom</artifactId>
+        <version>2-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.glowa-net.maven.example</groupId>
+    <artifactId>pojotesting-example</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <name>Pojo-Testing Example</name>
+    <description>Examples, how to use the 'pojo-testing'.</description>
+    <url>http://www.glowa-net.com</url>
+    <inceptionYear>2020</inceptionYear>
+
+    <scm>
+        <connection>scm:git:git://gitlab.com/ollily/pojotesting-example.git</connection>
+        <developerConnection>scm:git:git@gitlab.com/ollily/pojotesting-example.git</developerConnection>
+        <url>https://gitlab.com/ollily/pojotesting-example</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>GitLab Issues</system>
+        <url>https://gitlab.com/ollily/pojotesting-example/-/issues</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>gitlab</system>
+        <url>https://gitlab.com/ollily/pojotesting-example/-/pipelines</url>
+    </ciManagement>
+
+    <properties>
+        <!-- Gitlab Properties -->
+        <project.env.CI_PROJECT_ID>XXXXXX</project.env.CI_PROJECT_ID>
+
+        <!-- Sonar Properties -->
+        <sonar.projectKey>ollily_pojotesting-example</sonar.projectKey>
+    </properties>
+
+    <dependencyManagement>
+        <!-- My -->
+        <dependencies>
+            <dependency>
+                <groupId>com.glowa-net.maven.tools</groupId>
+                <artifactId>random-extension</artifactId>
+                <version>0.1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.glowa-net.maven.tools</groupId>
+                <artifactId>pojotesting-extension</artifactId>
+                <version>0.1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+        <!-- 3rd party -->
+    </dependencyManagement>
+
+    <dependencies>
+        <!-- My -->
+        <dependency>
+            <groupId>com.glowa-net.maven.tools</groupId>
+            <artifactId>random-extension</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.glowa-net.maven.tools</groupId>
+            <artifactId>pojotesting-extension</artifactId>
+        </dependency>
+        <!-- 3rd party -->
+        <!-- Test -->
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>coding.read</id>
+            <name>CoDinG Group</name>
+            <url>https://gitlab.com/api/v4/groups/10107405/-/packages/maven</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>interval:30</updatePolicy>
+                <checksumPolicy>ignore</checksumPolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>coding.read</id>
+            <name>CoDinG Group</name>
+            <url>https://gitlab.com/api/v4/groups/10107405/-/packages/maven</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>
