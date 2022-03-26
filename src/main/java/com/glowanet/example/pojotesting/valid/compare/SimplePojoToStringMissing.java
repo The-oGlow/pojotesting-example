@@ -1,4 +1,4 @@
-package com.glowanet.example.pojotesting.simple;
+package com.glowanet.example.pojotesting.valid.compare;
 
 import com.glowanet.example.pojotesting.AbstractSimplePojo;
 

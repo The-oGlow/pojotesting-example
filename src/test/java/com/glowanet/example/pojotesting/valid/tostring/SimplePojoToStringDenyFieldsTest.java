@@ -1,8 +1,7 @@
-package com.glowanet.example.pojotesting.simple;
+package com.glowanet.example.pojotesting.valid.tostring;
 
+import com.glowanet.example.pojotesting.valid.compare.SimplePojoToString;
 import com.glowanet.tools.unit.entity.AbstractEntityUnitTester;
-import com.glowanet.util.junit.TestResultHelper;
-import org.junit.Test;
 
 import java.util.List;
 
@@ -23,11 +22,4 @@ public class SimplePojoToStringDenyFieldsTest extends AbstractEntityUnitTester<S
         return List.of("password", "pwd");
     }
 
-    @Override
-    @Test
-    public void testToString() {
-        // catching the test and verify the result
-        super.testToString();
-        TestResultHelper.verifyCollector(this, TestResultHelper.NO_ERROR);
-    }
 }

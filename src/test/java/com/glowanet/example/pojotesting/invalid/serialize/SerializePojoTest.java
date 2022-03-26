@@ -1,12 +1,13 @@
-package com.glowanet.example.pojotesting.serialize;
+package com.glowanet.example.pojotesting.invalid.serialize;
 
+import com.glowanet.example.pojotesting.valid.serialize.SerializePojoInvalid;
 import com.glowanet.tools.unit.entity.AbstractEntityUnitTester;
 import com.glowanet.util.junit.TestResultHelper;
 import org.junit.Test;
 
-public class SerializePojoInvalidTest extends AbstractEntityUnitTester<SerializePojoInvalid> {
+public class SerializePojoTest extends AbstractEntityUnitTester<SerializePojoInvalid> {
 
-    public SerializePojoInvalidTest() {
+    public SerializePojoTest() {
         super(SerializePojoInvalid.class);
     }
 
@@ -19,6 +20,7 @@ public class SerializePojoInvalidTest extends AbstractEntityUnitTester<Serialize
     @Test
     public void testSerialVersionUIDIsCorrectInEntity() {
         super.testSerialVersionUIDIsCorrectInEntity();
-        TestResultHelper.verifyCollector(this, TestResultHelper.WITH_ERROR);
+        // this test must fail with an error
+        TestResultHelper.verifyCollectorWithReset(this, TestResultHelper.WITH_ERROR);
     }
 }

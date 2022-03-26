@@ -1,6 +1,8 @@
-package com.glowanet.example.pojotesting.simple;
+package com.glowanet.example.pojotesting.invalid.compare;
 
+import com.glowanet.example.pojotesting.valid.compare.SimplePojoCompareImplemented;
 import com.glowanet.tools.unit.entity.AbstractEntityUnitTester;
+import com.glowanet.util.junit.TestResultHelper;
 
 public class SimplePojoCompareImplementedTest extends AbstractEntityUnitTester<SimplePojoCompareImplemented> {
 
@@ -16,6 +18,9 @@ public class SimplePojoCompareImplementedTest extends AbstractEntityUnitTester<S
 
     @Override
     public void testEqualsLogicalAreTheSame() {
+        setCheckLogicalEqualsOnly(false);
         super.testEqualsLogicalAreTheSame();
+        //check the test result
+        TestResultHelper.verifyCollectorWithReset(this, TestResultHelper.WITH_ERROR);
     }
 }

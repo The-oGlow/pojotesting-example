@@ -1,4 +1,4 @@
-package com.glowanet.example.pojotesting.simple;
+package com.glowanet.example.pojotesting.valid.compare;
 
 public class SimplePojoCompareImplemented extends SimplePojoToString {
     @Override

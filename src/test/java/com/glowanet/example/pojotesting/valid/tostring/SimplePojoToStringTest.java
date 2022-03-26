@@ -1,5 +1,6 @@
-package com.glowanet.example.pojotesting.simple;
+package com.glowanet.example.pojotesting.valid.tostring;
 
+import com.glowanet.example.pojotesting.valid.compare.SimplePojoToString;
 import com.glowanet.tools.unit.entity.AbstractEntityUnitTester;
 
 public class SimplePojoToStringTest extends AbstractEntityUnitTester<SimplePojoToString> {

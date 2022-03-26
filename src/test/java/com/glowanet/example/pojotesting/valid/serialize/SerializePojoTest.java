@@ -1,4 +1,4 @@
-package com.glowanet.example.pojotesting.serialize;
+package com.glowanet.example.pojotesting.valid.serialize;
 
 import com.glowanet.tools.unit.entity.AbstractEntityUnitTester;
 

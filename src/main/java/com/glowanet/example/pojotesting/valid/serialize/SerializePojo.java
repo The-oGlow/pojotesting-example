@@ -1,4 +1,4 @@
-package com.glowanet.example.pojotesting.serialize;
+package com.glowanet.example.pojotesting.valid.serialize;
 
 public class SerializePojo extends AbstractSerializePojo {
 
