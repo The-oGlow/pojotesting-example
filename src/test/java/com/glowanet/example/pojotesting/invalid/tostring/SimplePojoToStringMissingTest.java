@@ -2,6 +2,8 @@ package com.glowanet.example.pojotesting.invalid.tostring;
 
 import com.glowanet.example.pojotesting.invalid.BaseInvalidEntityUnitTester;
 import com.glowanet.example.pojotesting.tostring.SimplePojoToStringMissing;
+import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
 
 import java.util.Map;
 
@@ -15,7 +17,7 @@ public class SimplePojoToStringMissingTest extends BaseInvalidEntityUnitTester<S
     }
 
     @Override
-    protected Map<String, Number> expectedMethods() {
-        return Map.of(METH_TOSTRING_01, THREE_ERRORS);
+    protected Map<String, Matcher<?>> expectedMethods() {
+        return Map.of(METH_TOSTRING_01, Matchers.equalTo(THREE_ERRORS));
     }
 }

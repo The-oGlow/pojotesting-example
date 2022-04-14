@@ -2,6 +2,8 @@ package com.glowanet.example.pojotesting.invalid.tostring;
 
 import com.glowanet.example.pojotesting.invalid.BaseInvalidEntityUnitTester;
 import com.glowanet.example.pojotesting.tostring.SimplePojoToString;
+import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
 
 import java.util.List;
 import java.util.Map;
@@ -18,8 +20,8 @@ public class SimplePojoToStringDenyFieldsTest extends BaseInvalidEntityUnitTeste
     }
 
     @Override
-    protected Map<String, Number> expectedMethods() {
-        return Map.of(METH_TOSTRING_01, WITH_ERROR);
+    protected Map<String, Matcher<?>> expectedMethods() {
+        return Map.of(METH_TOSTRING_01, Matchers.equalTo(WITH_ERROR));
     }
 
     @Override

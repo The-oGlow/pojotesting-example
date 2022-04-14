@@ -2,6 +2,8 @@ package com.glowanet.example.pojotesting.invalid.compare;
 
 import com.glowanet.example.pojotesting.compare.SimplePojoCompareInvalid;
 import com.glowanet.example.pojotesting.invalid.BaseInvalidEntityUnitTester;
+import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
 
 import java.util.Map;
 
@@ -17,7 +19,7 @@ public class SimplePojoCompareInvalidTest extends BaseInvalidEntityUnitTester<Si
     }
 
     @Override
-    protected Map<String, Number> expectedMethods() {
-        return Map.of(METH_EQUALS_02, WITH_ERROR);
+    protected Map<String, Matcher<?>> expectedMethods() {
+        return Map.of(METH_EQUALS_02, Matchers.equalTo(WITH_ERROR));
     }
 }
