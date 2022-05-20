@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.glowa-net.maven.parent</groupId>
         <artifactId>global-appl-pom</artifactId>
-        <version>2-SNAPSHOT</version>
+        <version>3-SNAPSHOT</version>
         <relativePath/>
     </parent>
 
@@ -75,39 +75,70 @@
         <!-- Test -->
     </dependencies>
 
+    <!-- Section Repositories -->
     <repositories>
         <repository>
-            <id>coding.read</id>
-            <name>CoDinG Group</name>
-            <url>https://gitlab.com/api/v4/groups/10107405/-/packages/maven</url>
+            <id>coding.central</id>
+            <name>Central is the 1st in row.</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </snapshots>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>daily</updatePolicy>
                 <checksumPolicy>warn</checksumPolicy>
             </releases>
+        </repository>
+        <repository>
+            <id>coding.read</id>
+            <name>Central Awsome Index</name>
+            <url>https://gitlab.com/api/v4/groups/10107405/-/packages/maven</url>
             <snapshots>
                 <enabled>true</enabled>
-                <updatePolicy>interval:30</updatePolicy>
-                <checksumPolicy>ignore</checksumPolicy>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
             </snapshots>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
         </repository>
     </repositories>
 
     <pluginRepositories>
         <pluginRepository>
-            <id>coding.read</id>
-            <name>CoDinG Group</name>
-            <url>https://gitlab.com/api/v4/groups/10107405/-/packages/maven</url>
+            <id>coding.central</id>
+            <name>Central is the 1st in row.</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </snapshots>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>daily</updatePolicy>
                 <checksumPolicy>fail</checksumPolicy>
             </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <id>coding.read</id>
+            <name>Central Awsome Index</name>
+            <url>https://gitlab.com/api/v4/groups/10107405/-/packages/maven</url>
             <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </snapshots>
+            <releases>
                 <enabled>true</enabled>
                 <updatePolicy>daily</updatePolicy>
                 <checksumPolicy>fail</checksumPolicy>
-            </snapshots>
+            </releases>
         </pluginRepository>
     </pluginRepositories>
 
