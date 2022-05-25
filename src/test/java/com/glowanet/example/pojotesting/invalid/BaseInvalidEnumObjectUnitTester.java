@@ -1,6 +1,6 @@
 package com.glowanet.example.pojotesting.invalid;
 
-import com.glowanet.tools.unit.enumobj.EnumObjectUnitTester;
+import com.glowanet.tools.unit.enums.EnumUnitTester;
 import com.glowanet.util.junit.TestResultHelper;
 import org.hamcrest.Matcher;
 import org.junit.After;
@@ -14,7 +14,7 @@ import java.util.Map;
  *
  * @param <T> the pojo, which will be tests
  */
-public abstract class BaseInvalidEnumObjectUnitTester<T> extends EnumObjectUnitTester<T> {
+public abstract class BaseInvalidEnumObjectUnitTester<T> extends EnumUnitTester<T> {
 
     /** Switch, if invalid tests should fail (FALSE) or succeed (TRUE). */
     public static final boolean OVERRIDE_RESULT = true;
