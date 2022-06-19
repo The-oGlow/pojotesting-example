@@ -19,3 +19,7 @@
 :proj_module: pojotesting-example
 :proj_version: [latest release]
 :proj_description: Examples, how to use the 'pojo-testing'.
+:proj_id_codacy: 74b8356cea654b08919919f35f109228
+:proj_id_coverity: -1
+:proj_id_openssf: -1
+
