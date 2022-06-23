@@ -1,7 +1,7 @@
 // project settings (from pom-file)
 // user data
 :proj_user: ollily
-:proj_user_org: ollily
+:proj_user_org: the-oglow
 :proj_author: Oliver Glowa
 :proj_user_email: coding at glowa-net dot com
 :proj_vcs_url: https://gitlab.com
@@ -14,7 +14,12 @@
 :org_email:
 
 // module data
+:proj_gitgroup: the-oglow
 :proj_group: com.glowa-net.maven.example
 :proj_module: pojotesting-example
 :proj_version: [latest release]
 :proj_description: Examples, how to use the 'pojo-testing'.
+:proj_id_codacy: 74b8356cea654b08919919f35f109228
+:proj_id_coverity: -1
+:proj_id_openssf: -1
+

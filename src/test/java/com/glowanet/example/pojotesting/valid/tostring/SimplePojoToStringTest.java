@@ -1,16 +1,16 @@
 package com.glowanet.example.pojotesting.valid.tostring;
 
-import com.glowanet.example.pojotesting.valid.compare.SimplePojoToString;
-import com.glowanet.tools.unit.entity.AbstractEntityUnitTester;
+import com.glowanet.example.pojotesting.tostring.SimplePojoToString;
+import com.glowanet.tools.unit.entity.EntityUnitTester;
 
-public class SimplePojoToStringTest extends AbstractEntityUnitTester<SimplePojoToString> {
+/**
+ * Example, how to test a pojo the easiest way.
+ * <p>
+ * Testing {@code SimplePojoToString} will succeed.
+ */
+public class SimplePojoToStringTest extends EntityUnitTester<SimplePojoToString> {
 
     public SimplePojoToStringTest() {
         super(SimplePojoToString.class);
-    }
-
-    @Override
-    protected SimplePojoToString createObject2Test() {
-        return new SimplePojoToString();
     }
 }

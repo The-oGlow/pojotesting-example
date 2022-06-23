@@ -1,15 +1,15 @@
 package com.glowanet.example.pojotesting.valid.serialize;
 
-import com.glowanet.tools.unit.entity.AbstractEntityUnitTester;
+import com.glowanet.example.pojotesting.serialize.SerializePojo;
+import com.glowanet.tools.unit.entity.EntityUnitTester;
 
-public class SerializePojoTest extends AbstractEntityUnitTester<SerializePojo> {
+/**
+ * Example, how to verify, that {@code java.io.Serializable} is implemented correctly.
+ */
+public class SerializePojoTest extends EntityUnitTester<SerializePojo> {
 
     public SerializePojoTest() {
         super(SerializePojo.class);
     }
 
-    @Override
-    protected SerializePojo createObject2Test() {
-        return new SerializePojo();
-    }
 }

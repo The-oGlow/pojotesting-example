@@ -2,7 +2,10 @@ package com.glowanet.example.pojotesting;
 
 import java.util.List;
 
-public abstract class AbstractSimplePojo {
+/**
+ * A simple pojo used as common base class for all tests.
+ */
+public abstract class BaseSimplePojo {
 
     public static final String       F_VAL_I         = "valI";
     public static final String       F_VAL_S         = "valS";
@@ -13,7 +16,6 @@ public abstract class AbstractSimplePojo {
     private Integer valI  = 1;
     private String  valS  = "Qwertz";
     private float   primJ = 2.3f;
-
 
     public Integer getValI() {
         return valI;
@@ -39,17 +41,30 @@ public abstract class AbstractSimplePojo {
         this.primJ = primJ;
     }
 
-    public boolean _equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    /**
+     * Underscored default implementation.
+     *
+     * @param obj the reference object with which to compare.
+     *
+     * @return {@code true} if this object is the same as the obj
+     * argument; {@code false} otherwise.
+     */
+    public boolean _equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
 
-        AbstractSimplePojo that = (AbstractSimplePojo) o;
+        BaseSimplePojo that = (BaseSimplePojo) obj;
 
         if (Float.compare(that.getPrimJ(), getPrimJ()) != 0) return false;
         if (getValI() != null ? !getValI().equals(that.getValI()) : that.getValI() != null) return false;
         return getValS() != null ? getValS().equals(that.getValS()) : that.getValS() == null;
     }
 
+    /**
+     * Underscored default implementation.
+     *
+     * @return a hash code value for this object.
+     */
     public int _hashCode() {
         int result = getValI() != null ? getValI().hashCode() : 0;
         result = 31 * result + (getValS() != null ? getValS().hashCode() : 0);
@@ -57,8 +72,13 @@ public abstract class AbstractSimplePojo {
         return result;
     }
 
+    /**
+     * Underscored default implementation.
+     *
+     * @return a string representation of the object.
+     */
     protected String _toString() {
-        return "AbstractSimplePojo{" +
+        return this.getClass().getSimpleName() + "{" +
                 "primJ=" + primJ +
                 ", valI=" + valI +
                 ", valS='" + valS + '\'' +
