@@ -1,33 +1,31 @@
 package com.glowanet.example.pojotesting.invalid.tostring;
 
-import com.glowanet.example.pojotesting.valid.compare.SimplePojoToString;
-import com.glowanet.tools.unit.entity.AbstractEntityUnitTester;
-import com.glowanet.util.junit.TestResultHelper;
+import com.glowanet.example.pojotesting.invalid.BaseInvalidEntityUnitTester;
+import com.glowanet.example.pojotesting.tostring.SimplePojoToString;
+import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
 
 import java.util.List;
+import java.util.Map;
 
-public class SimplePojoToStringDenyFieldsTest extends AbstractEntityUnitTester<SimplePojoToString> {
+import static com.glowanet.util.junit.TestResultHelper.WITH_ERROR;
+
+/**
+ * Example, to show what happens, if the {@code #toString()} contains a not allowed field.
+ */
+public class SimplePojoToStringDenyFieldsTest extends BaseInvalidEntityUnitTester<SimplePojoToString> {
 
     public SimplePojoToStringDenyFieldsTest() {
         super(SimplePojoToString.class);
     }
 
     @Override
-    protected SimplePojoToString createObject2Test() {
-        return new SimplePojoToString();
+    protected Map<String, Matcher<?>> expectedMethods() {
+        return Map.of(METH_TOSTRING_01, Matchers.equalTo(WITH_ERROR));
     }
-
 
     @Override
     protected List<String> fieldsDeniedForToString() {
-        return List.of("primJ");
-    }
-
-
-    @Override
-    public void testToString() {
-        super.testToString();
-        //check the test result
-        TestResultHelper.verifyCollectorWithReset(this, TestResultHelper.WITH_ERROR);
+        return List.of(SimplePojoToString.F_PRIM_I);
     }
 }

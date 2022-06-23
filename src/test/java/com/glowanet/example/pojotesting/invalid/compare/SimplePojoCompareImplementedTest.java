@@ -1,26 +1,26 @@
 package com.glowanet.example.pojotesting.invalid.compare;
 
-import com.glowanet.example.pojotesting.valid.compare.SimplePojoCompareImplemented;
-import com.glowanet.tools.unit.entity.AbstractEntityUnitTester;
-import com.glowanet.util.junit.TestResultHelper;
+import com.glowanet.example.pojotesting.compare.SimplePojoCompareImplemented;
+import com.glowanet.example.pojotesting.invalid.BaseInvalidEntityUnitTester;
+import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
 
-public class SimplePojoCompareImplementedTest extends AbstractEntityUnitTester<SimplePojoCompareImplemented> {
+import java.util.Map;
+
+import static com.glowanet.util.junit.TestResultHelper.WITH_ERROR;
+
+/**
+ * Example, to show what happens, if the {@code #compare()} checks for logical equal-ness, but object equal-ness is expected.
+ */
+public class SimplePojoCompareImplementedTest extends BaseInvalidEntityUnitTester<SimplePojoCompareImplemented> {
 
     public SimplePojoCompareImplementedTest() {
         super(SimplePojoCompareImplemented.class);
-
-    }
-
-    @Override
-    protected SimplePojoCompareImplemented createObject2Test() {
-        return new SimplePojoCompareImplemented();
-    }
-
-    @Override
-    public void testEqualsLogicalAreTheSame() {
         setCheckLogicalEqualsOnly(false);
-        super.testEqualsLogicalAreTheSame();
-        //check the test result
-        TestResultHelper.verifyCollectorWithReset(this, TestResultHelper.WITH_ERROR);
+    }
+
+    @Override
+    protected Map<String, Matcher<?>> expectedMethods() {
+        return Map.of(METH_EQUALS_01, Matchers.equalTo(WITH_ERROR));
     }
 }
