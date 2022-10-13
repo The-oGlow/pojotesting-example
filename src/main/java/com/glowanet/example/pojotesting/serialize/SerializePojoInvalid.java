@@ -5,5 +5,5 @@ package com.glowanet.example.pojotesting.serialize;
  */
 public class SerializePojoInvalid extends BaseSerializePojo {
 
-    private static final int serialVersionUID = -1;
+    private static final long serialVersionUID = -1;
 }
