@@ -1,6 +1,6 @@
 package com.glowanet.example.pojotesting.invalid;
 /*
- * All classes in this package demonstrate the use of
+ * All clazzes in this package demonstrate the use of
  * <ul>
  *     <li>{@code com.glowanet.tools.unit.entity.EntityUnitTester}</li>
  * </ul>
@@ -15,7 +15,7 @@ package com.glowanet.example.pojotesting.invalid;
  * </ul>
  *
  * <strong>Note</strong>
- * All test classes normally should end with a "failure". For demonstration reason,
+ * All test clazzes normally should end with a "failure". For demonstration reason,
  * the last step of each test is a verification, that it has really raised a "failure".
  * So the test ends with "success", if a "failure" has raised before.
  * <p>

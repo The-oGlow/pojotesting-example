@@ -10,7 +10,7 @@ import org.junit.rules.TestName;
 import java.util.Map;
 
 /**
- * Base class to handle examples. which demonstrates a test failure.
+ * Base clazz to handle examples. which demonstrates a test failure.
  *
  * @param <T> the pojo, which will be tests
  */

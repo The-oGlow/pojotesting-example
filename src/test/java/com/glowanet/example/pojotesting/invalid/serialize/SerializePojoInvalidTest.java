@@ -10,7 +10,7 @@ import java.util.Map;
 import static com.glowanet.util.junit.TestResultHelper.WITH_ERROR;
 
 /**
- * Example, to show what happens, if a serializable class has an invalid serialVersionUID.
+ * Example, to show what happens, if a serializable clazz has an invalid serialVersionUID.
  */
 public class SerializePojoInvalidTest extends BaseInvalidEntityUnitTester<SerializePojoInvalid> {
 

@@ -3,7 +3,7 @@ package com.glowanet.example.pojotesting;
 import java.util.List;
 
 /**
- * A simple pojo used as common base class for all tests.
+ * A simple pojo used as common base clazz for all tests.
  */
 public abstract class BaseSimplePojo {
 

@@ -1,6 +1,6 @@
 package com.glowanet.example.pojotesting.valid;
 /*
- * All classes in this package demonstrate the use of
+ * All clazzes in this package demonstrate the use of
  * <ul>
  *     <li>{@code com.glowanet.tools.unit.entity.EntityUnitTester}</li>
  * </ul>
@@ -14,5 +14,5 @@ package com.glowanet.example.pojotesting.valid;
  *      <li>{@code #toString()}, with verification, that specific elements are not mentioned</li>
  * </ul>
  *
- * <strong>All test classes will end with "success".</strong>
+ * <strong>All test clazzes will end with "success".</strong>
  */
