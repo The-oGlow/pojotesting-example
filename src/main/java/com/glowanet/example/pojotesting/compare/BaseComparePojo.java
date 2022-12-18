@@ -3,7 +3,7 @@ package com.glowanet.example.pojotesting.compare;
 import com.glowanet.example.pojotesting.BaseSimplePojo;
 
 /**
- * A simple pojo used as common base clazz for {@code #compare()} tests only.
+ * A simple abstract pojo used as common base clazz for {@code #compare()} tests only.
  */
 public abstract class BaseComparePojo extends BaseSimplePojo {
 

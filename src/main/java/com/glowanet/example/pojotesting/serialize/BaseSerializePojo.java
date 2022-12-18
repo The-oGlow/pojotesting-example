@@ -5,7 +5,7 @@ import com.glowanet.example.pojotesting.BaseSimplePojo;
 import java.io.Serializable;
 
 /**
- * A simple pojo used as common base clazz for serializable tests only.
+ * A simple abstract pojo used as common base clazz for serializable tests only.
  */
 public abstract class BaseSerializePojo extends BaseSimplePojo implements Serializable {
 

@@ -1,6 +1,6 @@
-package com.glowanet.example.pojotesting.valid.simple;
+package com.glowanet.example.pojotesting.valid.enums;
 
-import com.glowanet.example.pojotesting.simple.SimpleEnum;
+import com.glowanet.example.pojotesting.enums.SimpleEnum;
 import com.glowanet.tools.unit.enums.EnumUnitTester;
 
 import java.util.List;

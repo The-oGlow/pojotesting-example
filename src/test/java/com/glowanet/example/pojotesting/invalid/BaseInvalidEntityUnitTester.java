@@ -32,6 +32,11 @@ public abstract class BaseInvalidEntityUnitTester<T> extends EntityUnitTester<T>
         super(typeOfo2T);
     }
 
+    /**
+     * Define a map with methods which have to be checked with a different matcher.
+     *
+     * @return map of methods with their expected result.
+     */
     protected abstract Map<String, Matcher<?>> expectedMethods();
 
     @After
