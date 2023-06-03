@@ -8,5 +8,5 @@ package com.glowanet.example.pojotesting.serialize;
  */
 @SuppressWarnings("java:S2057")
 public class SerializePojoMissing extends BaseSerializePojo {
-
+ 
 }

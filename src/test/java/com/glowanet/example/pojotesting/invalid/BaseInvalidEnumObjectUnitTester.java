@@ -1,6 +1,6 @@
 package com.glowanet.example.pojotesting.invalid;
 
-import com.glowanet.tools.unit.enums.EnumUnitTester;
+import com.glowanet.tools.unit.entity.enums.EnumUnitTester;
 import com.glowanet.util.junit.TestResultHelper;
 import org.hamcrest.Matcher;
 import org.junit.After;

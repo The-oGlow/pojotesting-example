@@ -1,7 +1,7 @@
 package com.glowanet.example.pojotesting.valid.enums;
 
 import com.glowanet.example.pojotesting.enums.SimpleEnum;
-import com.glowanet.tools.unit.enums.EnumUnitTester;
+import com.glowanet.tools.unit.entity.enums.EnumUnitTester;
 
 import java.util.List;
 

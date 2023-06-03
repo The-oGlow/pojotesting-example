@@ -2,7 +2,7 @@ package com.glowanet.example.pojotesting.invalid.enums;
 
 import com.glowanet.example.pojotesting.enums.ExtendedInvalidEnum;
 import com.glowanet.example.pojotesting.invalid.BaseInvalidEnumObjectUnitTester;
-import com.glowanet.tools.unit.enums.NameCheckTypeEnum;
+import com.glowanet.tools.unit.entity.enums.NameCheckTypeEnum;
 import org.hamcrest.Matcher;
 import org.junit.Before;
 import org.junit.runner.RunWith;
